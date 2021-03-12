@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
-<title>You smell funny</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="./images/icon.png">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <head>
+    <title>Raul Soto</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./images/icon.png">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+    <style>
+      model-viewer{
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
 <body>
 
 <!-- Navbar (sit on top) -->
@@ -13,7 +22,7 @@
     <a href="#home" class="w3-bar-item w3-button"><b>Raul Soto</b> | Mathmagician</a>
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
-      <a href="#projects" class="w3-bar-item w3-button">Projects</a>
+      <a title="Holy guacamole!" href="#projects" class="w3-bar-item w3-button">Projects</a>
       <a href="#about" class="w3-bar-item w3-button">About</a>
       <a href="#contact" class="w3-bar-item w3-button">Contact</a>
     </div>
@@ -60,7 +69,18 @@
       <div class="w3-display-container">
         <a href="./3d_print.html">
         <div class="w3-display-topleft w3-black w3-padding">3D Printing</div>
-        <img src="/w3images/house4.jpg" alt="House" style="width:100%"></a>
+        <model-viewer
+          src="./daniel.glb"
+          camera-controls
+          auto-rotate
+          ar ios-src="./daniel.usdz"
+          alt="a 3d model of a daniel"
+        >
+        <div slot="progress-bar">
+          <div class="custom"></div>
+        </div>
+        </model-viewer>
+        <!-- <img src="/w3images/house4.jpg" alt="House" style="width:100%"></a> -->
       </div>
     </div>
   </div>
@@ -103,10 +123,10 @@
 
   <div class="w3-row-padding w3-grayscale">
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="/w3images/team2.jpg" alt="John" style="width:100%">
+      <img src="/images/raul_virtual.JPG" alt="John" style="width:100%">
       <h3>Raul Soto</h3>
       <p class="w3-opacity">Human</p>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p>Some people don't think it be like it is, but it do.</p>
       <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
@@ -117,17 +137,17 @@
       <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
+      <img src="/images/raul_wood_square.jpg" alt="Raul making" style="width:100%">
       <h3>Raul Soto</h3>
       <p class="w3-opacity">Maker</p>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p>Let's make it happen.</p>
       <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="/w3images/team4.jpg" alt="Dan" style="width:100%">
+      <img src="./images/raul_surf.jpg" alt="Raul surfing" style="width:100%">
       <h3>Raul Soto</h3>
       <p class="w3-opacity">Surfer</p>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p>The best surfer is the one having the most fun.</p>
       <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
     </div>
   </div>
