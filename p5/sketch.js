@@ -1,7 +1,10 @@
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(800, 800);
+  background(220);
 }
 
 function draw() {
-  background(220);
+  fill(255, 0, 0, 50);
+  stroke(0, 0, 255);
+  ellipse(400, 400, 100, 100);
 }
