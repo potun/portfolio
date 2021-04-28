@@ -39,11 +39,67 @@
   --border-style-dark: 1px solid rgba(0,0,0,.5);
 }
 
+/* Top navbar */
 .top{
   position:fixed;
   width:100%;
-  z-index:1
+  z-index:1;
 }
+
+.bar{
+  width:100%;
+  overflow:hidden;
+}
+
+.white{
+  color:#000!important;
+  background-color:#fff!important;
+}
+
+.card{
+  box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.wide{
+  letter-spacing:4px;
+}
+
+.padding{
+  padding:8px 16px!important;
+}
+
+.bar-item{
+  padding:8px 16px;
+  float:left;
+  width:auto;
+  border:none;
+  display:block;
+  outline:0;
+}
+
+.right{
+  float:right!important
+}
+
+.button{
+  border:none;
+  display:inline-block;
+  padding:8px 16px;
+  vertical-align:middle;
+  overflow:hidden;
+  text-decoration:none;
+  color:inherit;
+  background-color:inherit;
+  text-align:center;
+  cursor:pointer;
+  white-space:nowrap;
+}
+
+hide-small{
+  display:none!important;
+}
+
+
 
 .sidebar {
   margin: 0;
