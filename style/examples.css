@@ -95,8 +95,12 @@
   white-space:nowrap;
 }
 
-hide-small{
+.hide-small{
   display:none!important;
+}
+
+.wide{
+  letter-spacing: 3px;
 }
 
 
