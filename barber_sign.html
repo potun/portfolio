@@ -16,18 +16,33 @@
 </head>
 
 <!---Body--->
-<body class="w3-content w3-border-left w3-border-right">
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="./index.html#home" class="w3-bar-item w3-button"><b>Raul Soto</b> | Mathmagician</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a title="Holy guacamole!" href="./index.html#projects" class="w3-bar-item w3-button">Projects</a>
+      <a href="./index.html#about" class="w3-bar-item w3-button">About</a>
+    </div>
+  </div>
+</div>
+
+<!-- Push down content -->
+<div style="margin-top: 80px;"></div>
 
 <!---Slideshow--->
 <div class="w3-content w3-display-container">
-<img class="mySlides" src="./images/BarberSign/barber_00.jpg">
-<img class="mySlides" src="./images/BarberSign/barber_01.JPG">
-<img class="mySlides" src="./images/BarberSign/barber_02.JPG">
-<img class="mySlides" src="./images/BarberSign/barber_03.JPG">
-<img class="mySlides" src="./images/BarberSign/barber_04.JPG">
-<img class="mySlides" src="./images/BarberSign/barber_05.JPG">
-<img class="mySlides" src="./images/BarberSign/barber_06.JPG">
-<div class="w3-center w3-display-bottommiddle" style="width:100%">
+  <img class="mySlides" src="./images/BarberSign/barber_00.jpg">
+  <img class="mySlides" src="./images/BarberSign/barber_01.JPG">
+  <img class="mySlides" src="./images/BarberSign/barber_02.JPG">
+  <img class="mySlides" src="./images/BarberSign/barber_03.JPG">
+  <img class="mySlides" src="./images/BarberSign/barber_04.JPG">
+  <img class="mySlides" src="./images/BarberSign/barber_05.JPG">
+  <img class="mySlides" src="./images/BarberSign/barber_06.JPG">
+  <div class="w3-center w3-display-bottommiddle" style="width:100%">
     <div class="w3-left" onclick="plusDivs(-1)">&#10094;</div>
     <div class="w3-right" onclick="plusDivs(1)">&#10095;</div>
     <span class="w3-badge demo w3-border" onclick="currentDiv(1)"></span>
