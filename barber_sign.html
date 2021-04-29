@@ -1,90 +1,118 @@
 <!DOCTYPE html>
-
-<html>
-
-<!---Head--->
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>RS | Barber Sign</title>
-    <link rel="icon" href="./images/icon.png">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <style>
-        .mySlides {display:none}
-        .w3-left, .w3-right, .w3-badge {cursor:pointer}
-        .w3-badge {height:13px;width:13px;padding:0}
-    </style>
+  <title>RS | Woodworking</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="./images/icon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <style>
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+  div.center-wrapper{
+    width:100%;
+    margin: auto;
+  }
+  div.content{
+    margin-left:auto;
+    margin-right:auto;
+    max-width:720px;
+  }
+  </style>
 </head>
 
-<!---Body--->
 <body>
-
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+  <div class="w3-bar w3-white wide w3-padding w3-card">
     <a href="./index.html#home" class="w3-bar-item w3-button"><b>Raul Soto</b> | Mathmagician</a>
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
-      <a title="Holy guacamole!" href="./index.html#projects" class="w3-bar-item w3-button">Projects</a>
+      <a title="Yahaha! You found me!" href="./index.html#projects" class="w3-bar-item w3-button">Projects</a>
       <a href="./index.html#about" class="w3-bar-item w3-button">About</a>
     </div>
   </div>
 </div>
 
 <!-- Push down content -->
-<div style="margin-top: 80px;"></div>
+<div style="margin-top: 50px;"></div>
 
-<!---Slideshow--->
-<div class="w3-content w3-display-container">
-  <img class="mySlides" src="./images/BarberSign/barber_00.jpg">
-  <img class="mySlides" src="./images/BarberSign/barber_01.JPG">
-  <img class="mySlides" src="./images/BarberSign/barber_02.JPG">
-  <img class="mySlides" src="./images/BarberSign/barber_03.JPG">
-  <img class="mySlides" src="./images/BarberSign/barber_04.JPG">
-  <img class="mySlides" src="./images/BarberSign/barber_05.JPG">
-  <img class="mySlides" src="./images/BarberSign/barber_06.JPG">
-  <div class="w3-center w3-display-bottommiddle" style="width:100%">
-    <div class="w3-left" onclick="plusDivs(-1)">&#10094;</div>
-    <div class="w3-right" onclick="plusDivs(1)">&#10095;</div>
-    <span class="w3-badge demo w3-border" onclick="currentDiv(1)"></span>
-    <span class="w3-badge demo w3-border" onclick="currentDiv(2)"></span>
-    <span class="w3-badge demo w3-border" onclick="currentDiv(3)"></span>
-    <span class="w3-badge demo w3-border" onclick="currentDiv(4)"></span>
-    <span class="w3-badge demo w3-border" onclick="currentDiv(5)"></span>
-    <span class="w3-badge demo w3-border" onclick="currentDiv(6)"></span>
-    <span class="w3-badge demo w3-border" onclick="currentDiv(6)"></span>
-</div>
-</div>
+<!-- Carousel slideshow -->
+<div id="demo" class="content carousel center-wrapper" data-ride="carousel">
 
-<script>
-    var slideIndex = 1;
-    showDivs(slideIndex);
-    
-    function plusDivs(n) {
-      showDivs(slideIndex += n);
-    }
-    
-    function currentDiv(n) {
-      showDivs(slideIndex = n);
-    }
-    
-    function showDivs(n) {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("demo");
-      if (n > x.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = x.length}
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";  
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" w3-white", "");
-      }
-      x[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " w3-white";
-    }
-</script>
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+    <li data-target="#demo" data-slide-to="3"></li>
+    <li data-target="#demo" data-slide-to="4"></li>
+    <li data-target="#demo" data-slide-to="5"></li>
+    <li data-target="#demo" data-slide-to="6"></li>
+    <li data-target="#demo" data-slide-to="7"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./images/BarberSign/barber_000.JPG" alt="Final product" width="1100" height="500">
+    </div>
+    <div class="carousel-item">
+      <img src="./images/BarberSign/barber_00.JPG" alt="Design" width="1100" height="500">
+    </div>
+    <div class="carousel-item">
+      <img src="./images/BarberSign/barber_01.JPG" alt="Lumber selection" width="1100" height="500">
+    </div>
+    <div class="carousel-item">
+        <img src="./images/BarberSign/barber_02.JPG" alt="Glue up" width="1100" height="500">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/BarberSign/barber_03.JPG" alt="Lettering" width="1100" height="500">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/BarberSign/barber_04.JPG" alt="Hardware" width="1100" height="500">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/BarberSign/barber_05.JPG" alt="New York" width="1100" height="500">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/BarberSign/barber_06.JPG" alt="Finished barber sign" width="1100" height="500">
+      </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+  <hr>
+  <div style="padding-left:20px;padding-right: 20px;">
+    <h4><strong>ABOUT THE PROJECT</strong></h4>
+    <p>This barber sign is my first commissioned work. 
+      The client requested a modern, yet natural looking business sign for the exterior of their establishment. 
+      The design was simple and clean, so I sketched up the design with laser-cutting in mind for precise cuts.
+      Maple and walnut were chosen to create contrast. 
+      The standoffs were made using threaded rod and brass tubing for an elegant finish when observed closely. 
+      Walnut loses its dark tone when exposed to sunlight and spar varnish yellows over time.
+      The gamble paid off, as the southern face of the sign has lightened and apears gilded.
+      An apt effect, given that the barber shop is named "Gold Comb." 
+      Stay golden my friends.
+
+
+  
+    </p>
+  </div>
+</div>
 
 </body>
 </html>
-
-
