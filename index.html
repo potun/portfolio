@@ -2,22 +2,28 @@
 <html>
   <head>
     <title>Raul Soto</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="./images/icon.png">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="./images/icon.png" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <!-- icon library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"
+    ></script>
     <style>
-      model-viewer{
+      model-viewer {
         margin: 0 auto;
       }
-      .caption{
-        color:#fff!important;
-        background-color:rgba(70, 70, 70, 0.75)!important;
+      .caption {
+        color: #fff !important;
+        background-color: rgba(70, 70, 70, 0.75) !important;
       }
-      .wide{
+      .wide {
         letter-spacing: 3px;
       }
       .fa {
@@ -28,149 +34,248 @@
         text-decoration: none;
         margin: 5px 2px;
       }
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 0.5s ease;
+        background: rgb(255, 255, 0);
+        background: rgba(0, 59, 53, 0.5);
+        color: #009688;
+      }
+      .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      .w3-display-container:hover .overlay {
+        opacity: 1;
+      }
     </style>
   </head>
 
-<body>
-
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white wide w3-padding w3-card">
-    <a href="#home" class="w3-bar-item w3-button"><b>Raul Soto</b> | Mathmagician</a>
-    <!-- Float links to the right. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-      <a title="Holy guacamole!" href="#projects" class="w3-bar-item w3-button">Proyectos</a>
-      <a href="#about" class="w3-bar-item w3-button">About</a>
-    </div>
-  </div>
-</div>
-
-<!-- Push down content on small screens -->
-<div class="w3-hide-large" style="margin: top 50px;"></div>
-
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-  <img class="w3-image" src="./images/Raul.jpg" alt="Raul"  style="padding-top: 50px;">
-  <div class="w3-display-middle w3-margin-top w3-center">
-  </div>
-</header>
-
-<!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
-
-  <!-- Project Section -->
-  <div class="w3-container w3-padding-32" id="projects">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Projects</h3>
-  </div>
-
-  <div class="w3-row-padding">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <a href="./woodworking.html">
-          <div class="w3-display-topleft w3-padding caption">Woodworking</div>
-          <img src="./images/woodworking.jpg" alt="Woodworking" style="width:100%"></a>
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft caption w3-padding">Arduino</div>
-        <img src="./images/arduino_logo.png" alt="Arduino logo" style="width:100%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft caption w3-padding">RaspberryPi</div>
-        <img src="./images/Raspi.webp" alt="Raspberry Pi logo" style="width:100%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <a href="./3D_AR_VR.html">
-          <div class="w3-display-topleft caption w3-padding">3D/AR/VR</div>
-          <model-viewer
-            src="./3D_Objects/raul.glb"
-            camera-controls
-            auto-rotate
-            ios-src="./daniel.usdz"
-            alt="a 3d model of a Raul"
-            style="width: 100%; height: 350px; top: 0px;"
+  <body>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar w3-white wide w3-padding w3-card">
+        <a href="#home" class="w3-bar-item w3-button"
+          ><b>Raul Soto</b> | Mathmagician</a
+        >
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+          <a
+            title="Holy guacamole!"
+            href="#projects"
+            class="w3-bar-item w3-button"
+            >Proyectos</a
           >
-          </model-viewer>
-        </a>
+          <a href="#about" class="w3-bar-item w3-button">About</a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="w3-row-padding">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft caption w3-padding">Drones</div>
-        <img src="./images/drones.JPG" alt="DJI drones" style="width:100%">
+    <!-- Push down content on small screens -->
+    <div class="w3-hide-large" style="margin: top 50px"></div>
+
+    <!-- Header -->
+    <header
+      class="w3-display-container w3-content w3-wide"
+      style="max-width: 1500px"
+      id="home"
+    >
+      <img
+        class="w3-image"
+        src="./images/Raul.jpg"
+        alt="Raul"
+        style="padding-top: 50px"
+      />
+      <div class="w3-display-middle w3-margin-top w3-center"></div>
+    </header>
+
+    <!-- Page content -->
+    <div class="w3-content w3-padding" style="max-width: 1564px">
+      <!-- Project Section -->
+      <div class="w3-container w3-padding-32" id="projects">
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">
+          Projects
+        </h3>
       </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft caption w3-padding">Art</div>
-        <img src="./images/raul_spiral.png" alt="Stylized image of Raul" style="width:100%">
+
+      <div class="w3-row-padding">
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <a href="./woodworking.html">
+              <div class="w3-display-topleft w3-padding caption">
+                Woodworking
+              </div>
+              <img
+                src="./images/woodworking.jpg"
+                alt="Woodworking"
+                style="width: 100%"
+            /></a>
+          </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <!-- <div class="w3-display-topleft caption w3-padding">Arduino</div> -->
+            <img
+              src="./images/arduino_logo.svg"
+              alt="Arduino logo"
+              style="width: 100%"
+            />
+            <div class="overlay">
+              <div class="text">Arduino!</div>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft caption w3-padding">RaspberryPi</div>
+            <img
+              src="./images/Raspi.webp"
+              alt="Raspberry Pi logo"
+              style="width: 100%"
+            />
+          </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <a href="./3D_AR_VR.html">
+              <div class="w3-display-topleft caption w3-padding">3D/AR/VR</div>
+              <model-viewer
+                src="./3D_Objects/raul.glb"
+                camera-controls
+                auto-rotate
+                ios-src="./daniel.usdz"
+                alt="a 3d model of a Raul"
+                style="width: 100%; height: 350px; top: 0px"
+              >
+              </model-viewer>
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft caption w3-padding">Coding</div>
-        <img src="./images/HelloWorld.jpg" alt="Java code segment" style="width:100%">
+
+      <div class="w3-row-padding">
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft caption w3-padding">Drones</div>
+            <img
+              src="./images/drones.JPG"
+              alt="DJI drones"
+              style="width: 100%"
+            />
+          </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft caption w3-padding">Art</div>
+            <img
+              src="./images/raul_spiral.png"
+              alt="Stylized image of Raul"
+              style="width: 100%"
+            />
+          </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft caption w3-padding">Coding</div>
+            <img
+              src="./images/HelloWorld.jpg"
+              alt="Java code segment"
+              style="width: 100%"
+            />
+          </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <a href="./webdev.html">
+              <div class="w3-display-topleft caption w3-padding">
+                Web Development
+              </div>
+              <img src="./images/webdev.png" alt="House" style="width: 100%"
+            /></a>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <a href="./webdev.html">
-          <div class="w3-display-topleft caption w3-padding">Web Development</div>
-          <img src="./images/webdev.png" alt="House" style="width:100%"></a>
+
+      <!-- About Section -->
+      <div class="w3-container w3-padding-32" id="about">
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">
+          About Me
+        </h3>
+        <p>
+          I said-a hip, hop, the hippie, the hippie to the hip hip hop-a you
+          don't stop the rock It to the bang-bang boogie, say up jump the boogie
+          to the rhythm of the boogie, the beat.
+        </p>
       </div>
-    </div>
-  </div>
 
-  <!-- About Section -->
-  <div class="w3-container w3-padding-32" id="about">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About Me</h3>
-    <p>I said-a hip, hop, the hippie, the hippie to the hip hip hop-a you don't stop the rock
-      It to the bang-bang boogie, say up jump the boogie to the rhythm of the boogie, the beat.
-    </p>
-  </div>
+      <div class="w3-row-padding w3-grayscale">
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <img
+            src="./images/raul_virtual.JPG"
+            alt="Raul the human being"
+            style="width: 100%"
+          />
+          <h3>Human</h3>
+          <p>Some people don't think it be like it is, but it do.</p>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <img
+            src="./images/raul_square.jpeg"
+            alt="Raul the teacher"
+            style="width: 100%"
+          />
+          <h3>Professor</h3>
+          <p>Do as I say, not as I do.</p>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <img
+            src="./images/raul_wood_square.jpg"
+            alt="Raul making"
+            style="width: 100%"
+          />
+          <h3>Maker</h3>
+          <p>Let's make it happen.</p>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <img
+            src="./images/raul_surf.jpg"
+            alt="Raul surfing"
+            style="width: 100%"
+          />
+          <h3>Surfer</h3>
+          <p class="w3-opacity"></p>
+          <p>The best surfer is the one having the most fun.</p>
+        </div>
+      </div>
 
-  <div class="w3-row-padding w3-grayscale">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="./images/raul_virtual.JPG" alt="Raul the human being" style="width:100%">
-      <h3>Human</h3>
-      <p>Some people don't think it be like it is, but it do.</p>
+      <!-- End page content -->
     </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="./images/raul_square.jpeg" alt="Raul the teacher" style="width:100%">
-      <h3>Professor</h3>
-      <p>Do as I say, not as I do.</p>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="./images/raul_wood_square.jpg" alt="Raul making" style="width:100%">
-      <h3>Maker</h3>
-      <p>Let's make it happen.</p>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="./images/raul_surf.jpg" alt="Raul surfing" style="width:100%">
-      <h3>Surfer</h3>
-      <p class="w3-opacity"></p>
-      <p>The best surfer is the one having the most fun.</p>
-    </div>
-  </div>
-  
-<!-- End page content -->
-</div>
 
-
-<!-- Footer -->
-<footer class="w3-center caption w3-padding-16">
-  <a href="https://www.instagram.com/potun3000/" class="fa fa-instagram"></a>
-  <a href="https://github.com/potun" class="fa fa-github-square"></a>
-  <a href="https://www.linkedin.com/in/raul-soto-9ba56620b/" class="fa fa-linkedin-square"></a>
-</footer>
-
-</body>
+    <!-- Footer -->
+    <footer class="w3-center caption w3-padding-16">
+      <a
+        href="https://www.instagram.com/potun3000/"
+        class="fa fa-instagram"
+      ></a>
+      <a href="https://github.com/potun" class="fa fa-github-square"></a>
+      <a
+        href="https://www.linkedin.com/in/raul-soto-9ba56620b/"
+        class="fa fa-linkedin-square"
+      ></a>
+    </footer>
+  </body>
 </html>
