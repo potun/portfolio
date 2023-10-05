@@ -1,6 +1,6 @@
 # Portfolio
 
-This portfolio website is an exercise in the use of the popular frontend framework Bootstrap. Additional features and functionality are acheived using Glightbox and Swiper.
+This portfolio website uses the popular frontend framework Bootstrap. Additional features and functionality are acheived using Glightbox and Swiper.
 
 ## Bootstrap
 
